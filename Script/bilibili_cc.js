@@ -10,7 +10,7 @@
  
 [rewrite_local]
 
-# ～ 嗶哩嗶哩繁体CC字幕转中文简体（2022-10-12）@ddgksf2013
+# ～ 嗶哩嗶哩繁体CC字幕转中文简体（2022-10-12）
 ^https?:\/\/i.\.hdslb\.com\/bfs\/subtitle\/.+\.json$ url script-response-body https://raw.fastgit.org/Chang9an/ForOwnUse/main/Script/bilibili_cc.js
 
 [mitm]
@@ -19,7 +19,7 @@ hostname=i0.hdslb.com
 
 ***********************************/
 
-var cuttlefish ={"warning":"本腳本僅供學習交流使用，禁止轉載售賣","tgchannel":"https://t.me/ddgksf2021","feedback":"ddgksf2013@163.com"};
+var cuttlefish ={"warning":"本腳本僅供學習交流使用，禁止轉載售賣"};
 
 var ddgksf2013 = JSON.parse($response.body);
 
