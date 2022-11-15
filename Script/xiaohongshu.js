@@ -1,8 +1,8 @@
-
 /*
 version     v1.0.1
 updatetime  2022-11-04
 function    小红书去开屏广告、瀑布流广告、启动广告
+author      ddgksf2013
 */
 
 if (/^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/system_service\/splash_config/.test($request.url)) {
