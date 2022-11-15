@@ -6,7 +6,7 @@ author      kk pp
 
 
 [rewrite_local]
-^https?:\/\/api.coolapk.com\/v6\/(feed\/(replyList|detail)|main\/indexV8|dataList) url script-response-body https://github.com/Chang9an/ForOwnUse/blob/main/Script/coolapk.js
+^https?:\/\/api.coolapk.com\/v6\/(feed\/(replyList|detail)|main\/indexV8|dataList) url script-response-body https://raw.fastgit.org/Chang9an/ForOwnUse/main/Script/coolapk.js
 
 [mitm]
 hostname = api.coolapk.com
