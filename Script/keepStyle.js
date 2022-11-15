@@ -29,13 +29,13 @@
 # > 屏蔽更新
 ^https?:\/\/api\.gotokeep\.com\/anno\/v\d\/upgrade\/check url reject
 # > 我的页面去推广
-^https?:\/\/api\.gotokeep\.com\/athena\/v\d\/people\/my url script-response-body https://github.com/Chang9an/ForOwnUse/blob/main/Script/keepStyle.js
+^https?:\/\/api\.gotokeep\.com\/athena\/v\d\/people\/my url script-response-body https://raw.fastgit.org/Chang9an/ForOwnUse/main/Script/keepStyle.js
 # > 底部栏净化
-^https?:\/\/api\.gotokeep\.com\/config\/v\d\/basic url script-response-body https://github.com/Chang9an/ForOwnUse/blob/main/Script/keepStyle.js
+^https?:\/\/api\.gotokeep\.com\/config\/v\d\/basic url script-response-body https://raw.fastgit.org/Chang9an/ForOwnUse/main/Script/keepStyle.js
 # > 发现页只保留顶部
-https://api.gotokeep.com/homepage/v7/tab/find url script-response-body https://github.com/Chang9an/ForOwnUse/blob/main/Script/keepStyle.js
+https://api.gotokeep.com/homepage/v7/tab/find url script-response-body https://raw.fastgit.org/Chang9an/ForOwnUse/main/Script/keepStyle.js
 # > 课程预览页广告
-https://api.gotokeep.com/nuocha/course/v2/\w+/preview url script-response-body https://github.com/Chang9an/ForOwnUse/blob/main/Script/keepStyle.js
+https://api.gotokeep.com/nuocha/course/v2/\w+/preview url script-response-body https://raw.fastgit.org/Chang9an/ForOwnUse/main/Script/keepStyle.js
 
 [mitm]
 
