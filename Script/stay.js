@@ -10,7 +10,7 @@
 [rewrite_local]
 
 # ～ Stay（2022-10-17）
-^https?:\/\/api\.shenyin\.name\/stay-fork\/browse\/featured$ url script-response-body https://github.com/Chang9an/ForOwnUse/blob/main/Script/stay.js
+^https?:\/\/api\.shenyin\.name\/stay-fork\/browse\/featured$ url script-response-body https://raw.fastgit.org/Chang9an/ForOwnUse/main/Script/stay.js
 
 [mitm]
 
