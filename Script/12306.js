@@ -4,7 +4,7 @@
 2022-11-27
 
 [rewrite_local]
-^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList url script-response-body https://ocd0522.tk/ddgksf2013/Cuttlefish/raw/branch/master/Script/12306.js
+^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList url script-response-body https://raw.fastgit.org/Chang9an/ForOwnUse/main/Script/12306.js
 
 [mitm]
 hostname = ad.12306.cn
