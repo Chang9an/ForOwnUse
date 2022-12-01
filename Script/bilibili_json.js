@@ -29,7 +29,7 @@ if (magicJS.read(blackKey)) {
                     let items = [];
                     for (let item of obj["data"]["items"]) {
                         if (item.hasOwnProperty("banner_item")) {
-                            let bannerItems = [];
+                            /*let bannerItems = [];
                             for (let banner of item["banner_item"]) {
                                 if (banner["type"] === "ad") {
                                     continue;
@@ -41,7 +41,7 @@ if (magicJS.read(blackKey)) {
                             if (bannerItems.length >= 1) {
                                 item["banner_item"] = bannerItems;
                                 items.push(item);
-                            }
+                            }*/
                         } else if (
                             !item.hasOwnProperty("ad_info") &&
                             !blacklist.includes(item["args"]["up_name"]) &&
