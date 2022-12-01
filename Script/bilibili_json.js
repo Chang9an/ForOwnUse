@@ -1,9 +1,8 @@
 /*
 应用名称：自用B站去广告脚本
-
-更新时间：2022-11-08
-脚本版本：(74) 
+更新时间：2022-12-01
 */
+
 
 const scriptName = "BiliBili";
 const storyAidKey = "bilibili_story_aid";
@@ -29,11 +28,15 @@ if (magicJS.read(blackKey)) {
                     let items = [];
                     for (let item of obj["data"]["items"]) {
                         if (item.hasOwnProperty("banner_item")) {
-                            /*let bannerItems = [];
+                            let bannerItems = [];
                             for (let banner of item["banner_item"]) {
                                 if (banner["type"] === "ad") {
                                     continue;
-                                } else if (banner["static_banner"] && banner["static_banner"]["is_ad_loc"] != true) {
+                                }
+                                else if (banner["type"] === "static") {
+                                    continue;
+                                }
+                                else if (banner["static_banner"] && banner["static_banner"]["is_ad_loc"] != true) {
                                     bannerItems.push(banner);
                                 }
                             }
@@ -41,7 +44,7 @@ if (magicJS.read(blackKey)) {
                             if (bannerItems.length >= 1) {
                                 item["banner_item"] = bannerItems;
                                 items.push(item);
-                            }*/
+                            }
                         } else if (
                             !item.hasOwnProperty("ad_info") &&
                             !blacklist.includes(item["args"]["up_name"]) &&
@@ -220,11 +223,11 @@ if (magicJS.read(blackKey)) {
                     magicJS.logError(`热搜去广告出现异常：${err}`);
                 }
                 break;
-            //2022-03-05 add by ddgksf2013
+            //2022-03-05 add by d
             case /https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?/.test(magicJS.request.url):
                 try {
                     let obj = JSON.parse(magicJS.response.body);
-                    //magicJS.logInfo(`公众号墨鱼手记`);
+                    //magicJS.logInfo(`********`);
                     obj["data"]["vip"]["type"] = 2;
                     obj["data"]["vip"]["status"] = 1;
                     obj["data"]["vip"]["vip_pay_type"] = 1;
