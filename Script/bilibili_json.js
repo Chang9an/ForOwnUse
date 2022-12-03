@@ -1,8 +1,7 @@
 /*
-应用名称：自用B站去广告脚本
-更新时间：2022-12-01
+Bilibili NoAds
+更新时间：2022-12-02
 */
-
 
 const scriptName = "BiliBili";
 const storyAidKey = "bilibili_story_aid";
@@ -147,19 +146,7 @@ if (magicJS.read(blackKey)) {
                         delete obj["data"]["sections_v2"][index].tip_icon;
                         delete obj["data"]["sections_v2"][index].tip_title;
                         //2022-02-16 add by ddgksf2013
-                        for (let ii = 0; ii < obj["data"]["sections_v2"].length; ii++) {
-                            if (obj.data.sections_v2[ii].title == "推荐服务" || obj.data.sections_v2[ii].title == "推薦服務") {
-                                //obj.data.sections_v2[ii].items[0].title='\u516C\u773E\u865F';
-                                //obj.data.sections_v2[ii].items[1].title='\u58A8\u9B5A\u624B\u8A18';
-                            }
-                            if (obj.data.sections_v2[ii].title == "更多服務" || obj.data.sections_v2[ii].title == "更多服务") {
-                                if (obj.data.sections_v2[ii].items[0].id == 500) {
-                                    //obj.data.sections_v2[ii].items[0].title='\u516C\u773E\u865F';
-                                }
-                                if (obj.data.sections_v2[ii].items[1].id == 501) {
-                                    //obj.data.sections_v2[ii].items[1].title='\u58A8\u9B5A\u624B\u8A18';
-                                }
-                            }
+                        for (let ii = 0; ii < obj["data"]["sections_v2"].length; ii++) {                                                        
                             if (obj.data.sections_v2[ii].title == "创作中心" || obj.data.sections_v2[ii].title == "創作中心") {
                                 delete obj.data.sections_v2[ii].title;
                                 delete obj.data.sections_v2[ii].type;
@@ -223,11 +210,11 @@ if (magicJS.read(blackKey)) {
                     magicJS.logError(`热搜去广告出现异常：${err}`);
                 }
                 break;
-            //2022-03-05 add by d
+            //2022-03-05 add by ddgksf2013
             case /https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?/.test(magicJS.request.url):
                 try {
                     let obj = JSON.parse(magicJS.response.body);
-                    //magicJS.logInfo(`********`);
+                    //magicJS.logInfo(`公众号墨鱼手记`);
                     obj["data"]["vip"]["type"] = 2;
                     obj["data"]["vip"]["status"] = 1;
                     obj["data"]["vip"]["vip_pay_type"] = 1;
@@ -251,7 +238,7 @@ if (magicJS.read(blackKey)) {
                             module.items = module.items.filter((i) => i.blink.indexOf("www.bilibili.com") == -1);
                         }
                         if (module.style.startsWith("tip")) {
-                            module.items = null;
+                            module.items = [];
                         }
                     });
                     body = JSON.stringify(obj);
@@ -272,7 +259,7 @@ if (magicJS.read(blackKey)) {
                             module.items = module.items.filter((i) => i.blink.indexOf("www.bilibili.com") == -1);
                         }
                         if (module.style.startsWith("tip")) {
-                            module.items = null;
+                            module.items = [];
                         }
                     });
                     body = JSON.stringify(obj);
@@ -317,7 +304,7 @@ if (magicJS.read(blackKey)) {
             case /^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/list/.test(magicJS.request.url):
                 try {
                     let obj = JSON.parse(magicJS.response.body);
-                    if (obj.data) {
+                    if (obj.data&&obj.data.list) {
                         for (let item of obj["data"]["list"]) {
                             item["duration"] = 0;
                             // 显示时间
