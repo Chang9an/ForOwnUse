@@ -24,7 +24,7 @@
 ^https://api.weibo.cn/2/!/client/light_skin url script-response-body https://raw.fastgit.org/Chang9an/ForOwnUse/main/Script/weibo_main.js
 
 # > 非会员设置tab皮肤
-;^https://new.vip.weibo.cn/littleskin/preview url script-response-body https://raw.fastgit.org/Chang9an/ForOwnUse/main/Script/weibo_main.js
+^https://new.vip.weibo.cn/littleskin/preview url script-response-body https://raw.fastgit.org/Chang9an/ForOwnUse/main/Script/weibo_main.js
 
 [mitm] 
 
