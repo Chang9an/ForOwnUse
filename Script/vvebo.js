@@ -1,5 +1,3 @@
-
-
 let url = $request.url;
 let hasUid = (url) => url.includes("uid");
 let getUid = (url) => (hasUid(url) ? url.match(/uid=(\d+)/)[1] : undefined);
