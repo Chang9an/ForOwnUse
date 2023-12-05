@@ -6,9 +6,9 @@ QuantumultX 修复 vvebo 用户主页的显示脚本
 [mitm]
 hostname = api.weibo.cn
 [rewrite_local]
-^https:\/\/api\.weibo\.cn\/2\/users\/show\? url script-request-header https://raw.githubusercontent.com/Chang9an/ForOwnUse/main/Script/Vvebo.js
-^https:\/\/api\.weibo\.cn\/2\/statuses\/user_timeline\? url script-request-header https://raw.githubusercontent.com/Chang9an/ForOwnUse/main/Script/Vvebo.js
-^https:\/\/api\.weibo\.cn\/2\/statuses\/user_timeline\? url script-response-body https://raw.githubusercontent.com/Chang9an/ForOwnUse/main/Script/Vvebo.js
+^https:\/\/api\.weibo\.cn\/2\/users\/show\? url script-request-header https://raw.githubusercontent.com/bin64/Scripts/main/QuantumultX/vvebo.js
+^https:\/\/api\.weibo\.cn\/2\/statuses\/user_timeline\? url script-request-header https://raw.githubusercontent.com/bin64/Scripts/main/QuantumultX/vvebo.js
+^https:\/\/api\.weibo\.cn\/2\/statuses\/user_timeline\? url script-response-body https://raw.githubusercontent.com/bin64/Scripts/main/QuantumultX/vvebo.js
 *************************
 
 *****************************************/
@@ -23,10 +23,10 @@ if (url.includes("users/show")) {
     try{
         let data = JSON.parse($response.body);
         let statuses = data.cards
-            。map((card) => (card.card_group ? card.card_group : card))
-            。flat()
-            。filter((card) => card.card_type === 9)
-            。map((card) => card.mblog);
+            .map((card) => (card.card_group ? card.card_group : card))
+            .flat()
+            .filter((card) => card.card_type === 9)
+            .map((card) => card.mblog);
         let sinceId = data.cardlistInfo.since_id;
         $done({
             body: JSON.stringify({
