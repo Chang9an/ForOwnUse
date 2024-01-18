@@ -23,10 +23,10 @@ if (url.includes("users/show")) {
     try{
         let data = JSON.parse($response.body);
         let statuses = data.cards
-            。map((card) => (card.card_group ? card.card_group : card))
-            。flat()
-            。filter((card) => card.card_type === 9)
-            。map((card) => card.mblog);
+            .map((card) => (card.card_group ? card.card_group : card))
+            .flat()
+            .filter((card) => card.card_type === 9)
+            .map((card) => card.mblog);
         let sinceId = data.cardlistInfo.since_id;
         $done({
             body: JSON.stringify({
