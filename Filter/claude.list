@@ -1,0 +1,3 @@
+# Claude 分流 与openai共用策略组
+DOMAIN-SUFFIX, console.anthropic.com, OPENAI
+DOMAIN-SUFFIX, www.anthropic.com, OPENAI
