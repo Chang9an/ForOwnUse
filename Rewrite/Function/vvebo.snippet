@@ -1,0 +1,15 @@
+// ==UserScript==
+// @ScriptName        VVebo修复
+// @Author            @c9a @syr @androidcn
+// @UpdateTime        2023-04-22
+// @Attention         仅供学习交流 https://raw.githubusercontent.com/androidcn/userscripts/main/VVebo.snippet
+
+// ==/UserScript==  
+hostname = api.weibo.com
+
+# ～ fix-vvebo-user-timeline
+
+^https:\/\/api\.weibo\.cn\/2\/remind\/unread_count\? url script-request-header https://raw.githubusercontent.com/Chang9an/ForOwnUse/main/Script/vvebo.js
+^https:\/\/api\.weibo\.cn\/2\/statuses\/user_timeline\? url script-request-header https://raw.githubusercontent.com/Chang9an/ForOwnUse/main/Script/vvebo.js
+^https:\/\/api\.weibo\.cn\/2\/profile\/statuses\/tab\? url script-response-body https://raw.githubusercontent.com/Chang9an/ForOwnUse/main/Script/vvebo.js
+^https:\/\/api\.weibo\.cn\/2\/cardlist\? url script-response-body https://raw.githubusercontent.com/Chang9an/ForOwnUse/main/Script/vvebofans.js
