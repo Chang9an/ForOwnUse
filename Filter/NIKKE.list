@@ -13,7 +13,7 @@ DOMAIN-SUFFIX, aws-na-dr.intlgame.com, 全球加速
 DOMAIN-SUFFIX, data-aws-na.intlgame.com, 全球加速
 
 DOMAIN-SUFFIX, pc.crashsight-us.iegcom.com, 全球加速
-IP-CIDR,43.152.114.31/32, 全球加速
+IP-CIDR,43.152.114.31/32, no-resolve
 
 DOMAIN-SUFFIX,nikke-kr.com, 全球加速
 DOMAIN-SUFFIX,intlgame.com, 全球加速
