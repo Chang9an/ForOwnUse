@@ -13,18 +13,18 @@ DOMAIN-SUFFIX, aws-na-dr.intlgame.com, 全球加速
 DOMAIN-SUFFIX, data-aws-na.intlgame.com, 全球加速
 
 DOMAIN-SUFFIX, pc.crashsight-us.iegcom.com, 全球加速
-IP-CIDR,43.152.114.31/32, no-resolve
+IP-CIDR, 43.152.114.31/32, no-resolve
 
-DOMAIN-SUFFIX,nikke-kr.com, 全球加速
-DOMAIN-SUFFIX,intlgame.com, 全球加速
-DOMAIN-SUFFIX,iegcom.com, 全球加速
+DOMAIN-SUFFIX, nikke-kr.com, 全球加速
+DOMAIN-SUFFIX, intlgame.com, 全球加速
+DOMAIN-SUFFIX, iegcom.com, 全球加速
 
 #ACE
-DOMAIN-SUFFIX,anticheatexpert.com, 全球加速
+DOMAIN-SUFFIX, anticheatexpert.com, 全球加速
 DOMAIN-SUFFIX, down.anticheatexpert.com, 全球加速
 
 #PC NA
 DOMAIN-SUFFIX, catalog.gamepass.com, 全球加速 
 DOMAIN-SUFFIX, na1.centauriglobal.com, 全球加速 
-DOMAIN-SUFFIX,gamepass.com, 全球加速 
-DOMAIN-SUFFIX,centauriglobal.com, 全球加速 
+DOMAIN-SUFFIX, gamepass.com, 全球加速 
+DOMAIN-SUFFIX, centauriglobal.com, 全球加速 
